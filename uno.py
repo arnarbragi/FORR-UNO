@@ -1,7 +1,5 @@
-#Höfundur Arnar Bragi Bragason
-#Byrjað 30.04.2019, Lokið --.05.2019
-#Lokaverkefni í forritun
-#Olsen Olsen
+#Höfundur Arnar Bragi Bragason og Jökull Freysteinsson
+#UNO
 
 import random
 from spil import Spil
