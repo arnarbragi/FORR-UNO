@@ -5,6 +5,75 @@ import random
 from spil import Spil
 
 
+class Galdraspil:
+    def draga2(self):
+        for x in range(2):  # lykkja sem runnar þrisvar svo hægt sé að draga 3 spil í mesta lagi
+            draga = spilastokkur.pop(0)  # tek efst af spilastokkinum
+            print("Þú dróst", draga)  # prenta út spilið sem notandi dró
+            if notandiUmferd == True:
+                spilTolva1.append(draga) # set spilið í hönd
+                tolva1Umferd = False
+            elif tolva1Umferd == True and notandiUmferd == False:
+                spilTolva2.append(draga)
+                tolva2Umferd = False
+            elif tolva2Tumferd == True and tolva1Umferd == False:
+                spilTolva3.append(draga)
+                tolva3Umferd = False
+            elif tolva3Umferd == True and tolvaUmferd2 == False:
+                print("Tölva3 lætur þig draga 2 spil")
+                spilNotandi.append(draga)
+                notandiUmferd = False
+
+    def skipp(self):
+        if notandiUmferd == True:
+            tolva1Umferd = False
+        elif tolva1Umferd == True and notandiUmferd == False:
+            tolva2Umferd = False
+        elif tolva2Umferd == True and tolva1Umferd == False:
+            tolva3Umferd = False
+        elif tolva3Umferd == True and tolva2Umferd == False:
+            print("Tölva 3 bannar þér að gera ")
+            notandiUmferd = False
+    def party: #vantar fyrir tölvurnar
+        print("1. Gulur")
+        print("2. Rauður")
+        print("3. Grænn")
+        print("4. Blár")
+        print()
+        attaVal=int(input("Sláðu inn tölu tegundarinnar sem þú vilt breyta í: "))
+        if attaVal==1:
+            print("Þú breyttir í Gulan")
+            settUt = Spil(1,0)
+            kastbunki.insert(0,settUt)
+        elif attaVal==2:
+            print("Þú breyttir í Rauðan")
+            settUt = Spil(2,0)
+            kastbunki.insert(0,settUt)
+        elif attaVal==3:
+            print("Þú breyttir í Grænan")
+            settUt = Spil(3,0)
+            kastbunki.insert(0,settUt)
+        elif attaVal==4:
+            print("Þú breyttir í Bláan")
+            settUt = Spil(4,0)
+            kastbunki.insert(0,settUt)
+
+    def party4(): #Óklárað
+        for x in range(4):
+                draga = spilastokkur.pop(0)  # tek efst af spilastokkinum
+            if notandiUmferd == True:
+                
+                tolva1Umferd = False
+            elif tolva1Umferd == True and notandiUmferd == False:
+                tolva2Umferd = False
+            elif tolva2Umferd == True and tolva1Umferd == False:
+                tolva3Umferd = False
+            elif tolva3Umferd == True and tolva2Umferd == False:
+                print("Þú dróst", draga)  # prenta út spilið sem notandi dró
+                notandiUmferd = False
+
+            
+
 tilvik = Spil(0,0)
 spilastokkur = tilvik.geraSpilastokk()
 
@@ -56,7 +125,9 @@ while len(spilNotandi)>=1 and len(spilTolva1)>=1 and len(spilTolva2)>=1 and len(
     print(kastbunki[0])#prenta spilið sem var sett út síðast
     print()
     notandiUmferd=True
-    tolvaUmferd=True
+    tolva1Umferd=True
+    tolva2Umferd=True
+    tolva3Umferd=True
     
     #----------------------- Notandi gerir -----------------------
     if len(spilNotandi)>=2: #ef notandi hefur fleiri en 2 spil þá gerir það Olsen að false

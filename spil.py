@@ -21,29 +21,27 @@ class Spil():
         if self.nr == 10:
             nr = "Draga 2"
         elif self.nr == 11:
-            nr = "Snúa við"
-        elif self.nr == 12:
             nr = "skipp"
-        elif self.nr == 13:
+        elif self.nr == 12:
             nr = "Partý"
-        elif self.nr == 14:
+        elif self.nr == 13:
             nr = "Partý +4"
         else:
             nr = str(self.nr)
         return tegund + " " + nr
-    #notar init fallið til þess að búa til spilastokk með 52 spilum
+    #notar init fallið til þess að búa til spilastokk með 100 spilum
     def geraSpilastokk(self):
         l = []
         for t in range(1,5):
             s0 = Spil(t,0)
             l.append(s0)
             for m in range(2):
-                for n in range(1,13):
+                for n in range(1,12):
                     s1= Spil(t,n)
                     l.append(s1)
         for x in range(4):
-            sParty = Spil(0,13)
-            sParty4 = Spil(0,14)
+            sParty = Spil(0,12)
+            sParty4 = Spil(0,13)
             l.append(sParty)
             l.append(sParty4)
         random.shuffle(l)#stokkar spilastokkinn
