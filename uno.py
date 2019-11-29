@@ -2,6 +2,7 @@
 #UNO
 
 import random
+import time
 from spil import Spil
 
 
@@ -34,43 +35,175 @@ class Galdraspil:
         elif tolva3Umferd == True and tolva2Umferd == False:
             print("Tölva 3 bannar þér að gera ")
             notandiUmferd = False
-    def party: #vantar fyrir tölvurnar
-        print("1. Gulur")
-        print("2. Rauður")
-        print("3. Grænn")
-        print("4. Blár")
-        print()
-        attaVal=int(input("Sláðu inn tölu tegundarinnar sem þú vilt breyta í: "))
-        if attaVal==1:
-            print("Þú breyttir í Gulan")
-            settUt = Spil(1,0)
-            kastbunki.insert(0,settUt)
-        elif attaVal==2:
-            print("Þú breyttir í Rauðan")
-            settUt = Spil(2,0)
-            kastbunki.insert(0,settUt)
-        elif attaVal==3:
-            print("Þú breyttir í Grænan")
-            settUt = Spil(3,0)
-            kastbunki.insert(0,settUt)
-        elif attaVal==4:
-            print("Þú breyttir í Bláan")
-            settUt = Spil(4,0)
-            kastbunki.insert(0,settUt)
 
-    def party4(): #Óklárað
+    def party: 
+        if notandiUmferd == True:
+            print("1. Gulur")
+            print("2. Rauður")
+            print("3. Grænn")
+            print("4. Blár")
+            print()
+            attaVal=int(input("Sláðu inn tölu tegundarinnar sem þú vilt breyta í: "))
+            if attaVal==1:
+                print("Þú breyttir í Gulan")
+                settUt = Spil(1,0)
+                kastbunki.insert(0,settUt)
+            elif attaVal==2:
+                print("Þú breyttir í Rauðan")
+                settUt = Spil(2,0)
+                kastbunki.insert(0,settUt)
+            elif attaVal==3:
+                print("Þú breyttir í Grænan")
+                settUt = Spil(3,0)
+                kastbunki.insert(0,settUt)
+            elif attaVal==4:
+                print("Þú breyttir í Bláan")
+                settUt = Spil(4,0)
+                kastbunki.insert(0,settUt)
+        elif tolva1Umferd == True and notandiUmferd == False:
+            attaVal=random.randint(1,4)
+                if attaVal==1:
+                    print("Tölvan breytti í Gulan")
+                    settUt = Spil(1,0)
+                    kastbunki.insert(0,settUt)
+                elif attaVal==2:
+                    print("Tölvan breytti í Rauðan")
+                    settUt = Spil(2,0)
+                    kastbunki.insert(0,settUt)
+                elif attaVal==3:
+                    print("Tölvan breytti í Grænan")
+                    settUt = Spil(3,0)
+                    kastbunki.insert(0,settUt)
+                elif attaVal==4:
+                    print("Tölvan breytti í Bláan")
+                    settUt = Spil(4,0)
+                    kastbunki.insert(0,settUt)
+        elif tolva2Tumferd == True and tolva1Umferd == False:
+            attaVal=random.randint(1,4)
+                if attaVal==1:
+                    print("Tölvan breytti í Gulan")
+                    settUt = Spil(1,0)
+                    kastbunki.insert(0,settUt)
+                elif attaVal==2:
+                    print("Tölvan breytti í Rauðan")
+                    settUt = Spil(2,0)
+                    kastbunki.insert(0,settUt)
+                elif attaVal==3:
+                    print("Tölvan breytti í Grænan")
+                    settUt = Spil(3,0)
+                    kastbunki.insert(0,settUt)
+                elif attaVal==4:
+                    print("Tölvan breytti í Bláan")
+                    settUt = Spil(4,0)
+                    kastbunki.insert(0,settUt)
+        elif tolva3Umferd == True and tolvaUmferd2 == False:
+            attaVal=random.randint(1,4)
+                if attaVal==1:
+                    print("Tölvan breytti í Gulan")
+                    settUt = Spil(1,0)
+                    kastbunki.insert(0,settUt)
+                elif attaVal==2:
+                    print("Tölvan breytti í Rauðan")
+                    settUt = Spil(2,0)
+                    kastbunki.insert(0,settUt)
+                elif attaVal==3:
+                    print("Tölvan breytti í Grænan")
+                    settUt = Spil(3,0)
+                    kastbunki.insert(0,settUt)
+                elif attaVal==4:
+                    print("Tölvan breytti í Bláan")
+                    settUt = Spil(4,0)
+                    kastbunki.insert(0,settUt)
+
+    def party4():
         for x in range(4):
-                draga = spilastokkur.pop(0)  # tek efst af spilastokkinum
+            draga = spilastokkur.pop(0)  # tek efst af spilastokkinum
             if notandiUmferd == True:
-                
+                print("1. Gulur")
+                print("2. Rauður")
+                print("3. Grænn")
+                print("4. Blár")
+                print()
+                attaVal=int(input("Sláðu inn tölu tegundarinnar sem þú vilt breyta í: "))
+                if attaVal==1:
+                    print("Þú breyttir í Gulan")
+                    settUt = Spil(1,0)
+                    kastbunki.insert(0,settUt)
+                elif attaVal==2:
+                    print("Þú breyttir í Rauðan")
+                    settUt = Spil(2,0)
+                    kastbunki.insert(0,settUt)
+                elif attaVal==3:
+                    print("Þú breyttir í Grænan")
+                    settUt = Spil(3,0)
+                    kastbunki.insert(0,settUt)
+                elif attaVal==4:
+                    print("Þú breyttir í Bláan")
+                    settUt = Spil(4,0)
+                    kastbunki.insert(0,settUt)
+                spilTolva1.append(draga)
                 tolva1Umferd = False
             elif tolva1Umferd == True and notandiUmferd == False:
+                attaVal=random.randint(1,4)
+                    if attaVal==1:
+                        print("Tölvan breytti í Gulan")
+                        settUt = Spil(1,0)
+                        kastbunki.insert(0,settUt)
+                    elif attaVal==2:
+                        print("Tölvan breytti í Rauðan")
+                        settUt = Spil(2,0)
+                        kastbunki.insert(0,settUt)
+                    elif attaVal==3:
+                        print("Tölvan breytti í Grænan")
+                        settUt = Spil(3,0)
+                        kastbunki.insert(0,settUt)
+                    elif attaVal==4:
+                        print("Tölvan breytti í Bláan")
+                        settUt = Spil(4,0)
+                        kastbunki.insert(0,settUt)
+                spilTolva2.append(draga)
                 tolva2Umferd = False
-            elif tolva2Umferd == True and tolva1Umferd == False:
+            elif tolva2Tumferd == True and tolva1Umferd == False:
+                attaVal=random.randint(1,4)
+                    if attaVal==1:
+                        print("Tölvan breytti í Gulan")
+                        settUt = Spil(1,0)
+                        kastbunki.insert(0,settUt)
+                    elif attaVal==2:
+                        print("Tölvan breytti í Rauðan")
+                        settUt = Spil(2,0)
+                        kastbunki.insert(0,settUt)
+                    elif attaVal==3:
+                        print("Tölvan breytti í Grænan")
+                        settUt = Spil(3,0)
+                        kastbunki.insert(0,settUt)
+                    elif attaVal==4:
+                        print("Tölvan breytti í Bláan")
+                        settUt = Spil(4,0)
+                        kastbunki.insert(0,settUt)
+                spilTolva3.append(draga)
                 tolva3Umferd = False
-            elif tolva3Umferd == True and tolva2Umferd == False:
-                print("Þú dróst", draga)  # prenta út spilið sem notandi dró
-                notandiUmferd = False
+            elif tolva3Umferd == True and tolvaUmferd2 == False:
+                attaVal=random.randint(1,4)
+                    if attaVal==1:
+                        print("Tölvan breytti í Gulan")
+                        settUt = Spil(1,0)
+                        kastbunki.insert(0,settUt)
+                    elif attaVal==2:
+                        print("Tölvan breytti í Rauðan")
+                        settUt = Spil(2,0)
+                        kastbunki.insert(0,settUt)
+                    elif attaVal==3:
+                        print("Tölvan breytti í Grænan")
+                        settUt = Spil(3,0)
+                        kastbunki.insert(0,settUt)
+                    elif attaVal==4:
+                        print("Tölvan breytti í Bláan")
+                        settUt = Spil(4,0)
+                        kastbunki.insert(0,settUt)
+                    print("Þú dróst", draga)  # prenta út spilið sem notandi dró
+                    spilNotandi.append(draga)
+                    notandiUmferd = False
 
             
 
@@ -296,103 +429,104 @@ while len(spilNotandi)>=1 and len(spilTolva1)>=1 and len(spilTolva2)>=1 and len(
     print("-"*5, "SPIL Á BORÐI", "-"*5)
     print(kastbunki[0])#prenta spilið sem var sett út síðast
     print()
-    '''
-    #----------------------- Tölva gerir -----------------------
-    tolvaDraga=False
-    while tolvaUmferd:#lykkja sem runnar þangað til tölvan er búin að gera
-        if len(spilTolva)==2:#ef tölvan hefur 2 spil eftir og getur sett út spil þá segir hún olsen
-            leyfilegt=False
+    
+    # ----------------------- Tölva gerir -----------------------
+    tolvaDraga = False
+    while tolvaUmferd:  # lykkja sem runnar þangað til tölvan er búin að gera
+        if len(spilTolva) == 2:  # ef tölvan hefur 2 spil eftir og getur sett út spil þá segir hún olsen
+            leyfilegt = False
             for y in range(len(spilTolva)):
-                if kastbunki[0].tegund == spilTolva[y].tegund or kastbunki[0].nr == spilTolva[y].nr or spilTolva[y].nr == 8:
-                    leyfilegt=True
+                if kastbunki[0].tegund == spilTolva[y].tegund or kastbunki[0].nr == spilTolva[y].nr or spilTolva[y].nr == 10 or spilTolva[y].nr == 11 or spilTolva[y].nr == 12 or spilTolva[y].nr == 13 or spilTolva[y].nr == 14:
+                    leyfilegt = True
                 if leyfilegt:
-                    tolvaOLSEN=True
+                    tolvaOLSEN = True
                     print("Tölva segir OLSEN!")
                     break
-        if len(spilTolva)==1:#ef tölva hefur eitt spil eftir og getur sett það út segir hún olsen olsen
-            leyfilegt=False
+        if len(spilTolva) == 1:  # ef tölva hefur eitt spil eftir og getur sett það út segir hún olsen olsen
+            leyfilegt = False
             for y in range(len(spilTolva)):
-                if kastbunki[0].tegund == spilTolva[y].tegund or kastbunki[0].nr == spilTolva[y].nr or spilTolva[y].nr == 8:
-                    leyfilegt=True
+                if kastbunki[0].tegund == spilTolva[y].tegund or kastbunki[0].nr == spilTolva[y].nr or spilTolva[y].nr == 10 or spilTolva[y].nr == 11 or spilTolva[y].nr == 12 or spilTolva[y].nr == 13 or spilTolva[y].nr == 14:
+                    leyfilegt = True
                 if leyfilegt:
-                    tolvaOLSENOLSEN=True
+                    tolvaOLSENOLSEN = True
                     print("Tölva segir OLSEN OLSEN!!!")
         for y in range(len(spilTolva)):
-            #tölvan fer í gegnum spilin sín og setur út fyrsta spilið sem hún getur
-            if kastbunki[0].tegund == spilTolva[y].tegund or kastbunki[0].nr == spilTolva[y].nr or spilTolva[y].nr == 8:
-                print("Tölvan setti út",spilTolva[y])
+            # tölvan fer í gegnum spilin sín og setur út fyrsta spilið sem hún getur
+            if kastbunki[0].tegund == spilTolva[y].tegund or kastbunki[0].nr == spilTolva[y].nr or spilTolva[y].nr == 10 or spilTolva[y].nr == 11 or spilTolva[y].nr == 12 or spilTolva[y].nr == 13 or spilTolva[y].nr == 14:
+                print("Tölvan setti út", spilTolva[y])
                 settUt2 = spilTolva.pop(y)
-                kastbunki.insert(0,settUt2)
-                if settUt2.nr == 8: # ef tölvan setur út áttu velur hún randomly tegund
-                    attaVal=random.randint(1,4)
-                    if attaVal==1:
-                        print("Tölvan breytti í Hjarta")
-                        settUt = Spil(1,0)
-                        kastbunki.insert(0,settUt)
-                    elif attaVal==2:
-                        print("Tölvan breytti í Spaða")
-                        settUt = Spil(2,0)
-                        kastbunki.insert(0,settUt)
-                    elif attaVal==3:
-                        print("Tölvan breytti í Tígul")
-                        settUt = Spil(3,0)
-                        kastbunki.insert(0,settUt)
-                    elif attaVal==4:
-                        print("Tölvan breytti í Lauf")
-                        settUt = Spil(4,0)
-                        kastbunki.insert(0,settUt)
-                tolvaUmferd=False #enda umferð tölvunnar
+                kastbunki.insert(0, settUt2)
+                if settUt2.nr == 8:  # ef tölvan setur út áttu velur hún randomly tegund
+                    attaVal = random.randint(1, 4)
+                    if attaVal == 1:
+                        print("Tölvan breytti í Rauður")
+                        settUt = Spil(1, 0)
+                        kastbunki.insert(0, settUt)
+                    elif attaVal == 2:
+                        print("Tölvan breytti í Gulur")
+                        settUt = Spil(2, 0)
+                        kastbunki.insert(0, settUt)
+                    elif attaVal == 3:
+                        print("Tölvan breytti í Grænn")
+                        settUt = Spil(3, 0)
+                        kastbunki.insert(0, settUt)
+                    elif attaVal == 4:
+                        print("Tölvan breytti í Blár")
+                        settUt = Spil(4, 0)
+                        kastbunki.insert(0, settUt)
+                tolvaUmferd = False  # enda umferð tölvunnar
                 break
             else:
-                if len(spilTolva)==1: #ef það er eitt spil eftir og ekki er hægt að setja það út dregur tölvan spil
-                    tolvaDraga=True
-                elif y == (len(spilTolva)-1):
-                    tolvaDraga=True #ef tölvan getur ekki notað neitt af spilunum sínum dregur hún
+                if len(spilTolva) == 1:  # ef það er eitt spil eftir og ekki er hægt að setja það út dregur tölvan spil
+                    tolvaDraga = True
+                elif y == (len(spilTolva) - 1):
+                    tolvaDraga = True  # ef tölvan getur ekki notað neitt af spilunum sínum dregur hún
                     break
                 else:
-                    pass #ef ekki er hægt að nota spilið en tölvan er ekki búin að skoða öll spilin fer hún á næsta spil
-            if tolvaDraga: #ef tölvan þarf að draga þá...
-                if len(spilastokkur)==0:#ef engin spil eru í spilastokknum þá sný ég kastbunkanum við
+                    pass  # ef ekki er hægt að nota spilið en tölvan er ekki búin að skoða öll spilin fer hún á næsta spil
+            if tolvaDraga:  # ef tölvan þarf að draga þá...
+                if len(spilastokkur) == 0:  # ef engin spil eru í spilastokknum þá sný ég kastbunkanum við
                     for i in range(len(kastbunki)):
-                        if kastbunki[i].nr == 0:#eyði öllum spilum sem ég bý til með áttunni
+                        if kastbunki[i].nr == 0:  # eyði öllum spilum sem ég bý til með áttunni
                             kastbunki.pop(i)
-                    for z in range(1,53):
+                    for z in range(1, 53):
                         faera = kastbunki.pop(z)
-                        spilastokkur.insert(0,faera)
-                dreginSpil=0
-                for x in range(3):#lykkja sem runnar þrisvar svo hægt sé að draga 3 spil í mesta lagi
-                    draga=spilastokkur.pop(0)#tek spil úr spilastokknum
-                    print("Tölva dró")#segi að tölvan hafi dregið en ekki hvað hún dró. Þetta er keppni
-                    spilTolva.append(draga)#set spilið í hendi tölvunnar
-                    if kastbunki[0].tegund == draga.tegund or kastbunki[0].nr == draga.nr or draga.nr == 8: #ef hægt er að ssetja út spilið setur tölvan spilið út
-                        print("Tölvan setti út",draga)
+                        spilastokkur.insert(0, faera)
+                dreginSpil = 0
+                for x in range(3):  # lykkja sem runnar þrisvar svo hægt sé að draga 3 spil í mesta lagi
+                    draga = spilastokkur.pop(0)  # tek spil úr spilastokknum
+                    print("Tölva dró")  # segi að tölvan hafi dregið en ekki hvað hún dró. Þetta er keppni
+                    spilTolva.append(draga)  # set spilið í hendi tölvunnar
+                    if kastbunki[0].tegund == draga.tegund or kastbunki[
+                        0].nr == draga.nr or draga.nr == 8:  # ef hægt er að ssetja út spilið setur tölvan spilið út
+                        print("Tölvan setti út", draga)
                         settUt = spilTolva.pop(-1)
-                        kastbunki.insert(0,settUt)
-                        if settUt.nr == 8: #ef tölvan setur út átta velur hún random tegund
-                            attaVal=random.randint(1,4)
-                            if attaVal==1:
+                        kastbunki.insert(0, settUt)
+                        if settUt.nr == 8:  # ef tölvan setur út átta velur hún random tegund
+                            attaVal = random.randint(1, 4)
+                            if attaVal == 1:
                                 print("Tölvan breytti í Hjarta")
-                                settUt = Spil(1,0)
-                                kastbunki.insert(0,settUt)
-                            elif attaVal==2:
+                                settUt = Spil(1, 0)
+                                kastbunki.insert(0, settUt)
+                            elif attaVal == 2:
                                 print("Tölvan breytti í Spaða")
-                                settUt = Spil(2,0)
-                                kastbunki.insert(0,settUt)
-                            elif attaVal==3:
+                                settUt = Spil(2, 0)
+                                kastbunki.insert(0, settUt)
+                            elif attaVal == 3:
                                 print("Tölvan breytti í Tígul")
-                                settUt = Spil(3,0)
-                                kastbunki.insert(0,settUt)
-                            elif attaVal==4:
+                                settUt = Spil(3, 0)
+                                kastbunki.insert(0, settUt)
+                            elif attaVal == 4:
                                 print("Tölvan breytti í Lauf")
-                                settUt = Spil(4,0)
-                                kastbunki.insert(0,settUt)
-                            tolvaUmferd=False
+                                settUt = Spil(4, 0)
+                                kastbunki.insert(0, settUt)
+                            tolvaUmferd = False
                         break
-                    dreginSpil+=1
+                    dreginSpil += 1
                 if tolvaUmferd:
-                    if dreginSpil == 3:#ef tölvan dregur 3 spil og getur ennþá ekki gert segir hún pass
+                    if dreginSpil == 3:  # ef tölvan dregur 3 spil og getur ennþá ekki gert segir hún pass
                         print("Tölvan segir PASS")
-                tolvaUmferd=False
+                tolvaUmferd = False
                 break
         print()
 
@@ -400,4 +534,6 @@ if len(spilNotandi)==0:#ef notandi kláraði spilin sín/vann
     print("ÞÚ VANNST!!! TIL HAMINGJU!!!")
 elif len(spilTolva)==0:#ef tölvan kláraði spilin sín/vann
     print("TÖLVAN VANN!!! Gengur betur næst!")
-'''
+
+
+
